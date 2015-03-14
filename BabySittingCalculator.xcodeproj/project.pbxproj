@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		077276651AB4BE8600AEA537 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 077276641AB4BE8600AEA537 /* main.m */; };
+		077276681AB4BE8600AEA537 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 077276671AB4BE8600AEA537 /* AppDelegate.m */; };
+		0772766B1AB4BE8600AEA537 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0772766A1AB4BE8600AEA537 /* ViewController.m */; };
+		0772766E1AB4BE8600AEA537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0772766C1AB4BE8600AEA537 /* Main.storyboard */; };
+		077276701AB4BE8600AEA537 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0772766F1AB4BE8600AEA537 /* Images.xcassets */; };
+		077276731AB4BE8600AEA537 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 077276711AB4BE8600AEA537 /* LaunchScreen.xib */; };
+		0772767F1AB4BE8600AEA537 /* BabySittingCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0772767E1AB4BE8600AEA537 /* BabySittingCalculatorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		077276791AB4BE8600AEA537 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 077276571AB4BE8600AEA537 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0772765E1AB4BE8600AEA537;
+			remoteInfo = BabySittingCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0772765F1AB4BE8600AEA537 /* BabySittingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabySittingCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		077276631AB4BE8600AEA537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		077276641AB4BE8600AEA537 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		077276661AB4BE8600AEA537 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		077276671AB4BE8600AEA537 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		077276691AB4BE8600AEA537 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0772766A1AB4BE8600AEA537 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0772766D1AB4BE8600AEA537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0772766F1AB4BE8600AEA537 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		077276721AB4BE8600AEA537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		077276781AB4BE8600AEA537 /* BabySittingCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabySittingCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0772767D1AB4BE8600AEA537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0772767E1AB4BE8600AEA537 /* BabySittingCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabySittingCalculatorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0772765C1AB4BE8600AEA537 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		077276751AB4BE8600AEA537 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		077276561AB4BE8600AEA537 = {
+			isa = PBXGroup;
+			children = (
+				077276611AB4BE8600AEA537 /* BabySittingCalculator */,
+				0772767B1AB4BE8600AEA537 /* BabySittingCalculatorTests */,
+				077276601AB4BE8600AEA537 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		077276601AB4BE8600AEA537 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0772765F1AB4BE8600AEA537 /* BabySittingCalculator.app */,
+				077276781AB4BE8600AEA537 /* BabySittingCalculatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		077276611AB4BE8600AEA537 /* BabySittingCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				077276661AB4BE8600AEA537 /* AppDelegate.h */,
+				077276671AB4BE8600AEA537 /* AppDelegate.m */,
+				077276691AB4BE8600AEA537 /* ViewController.h */,
+				0772766A1AB4BE8600AEA537 /* ViewController.m */,
+				0772766C1AB4BE8600AEA537 /* Main.storyboard */,
+				0772766F1AB4BE8600AEA537 /* Images.xcassets */,
+				077276711AB4BE8600AEA537 /* LaunchScreen.xib */,
+				077276621AB4BE8600AEA537 /* Supporting Files */,
+			);
+			path = BabySittingCalculator;
+			sourceTree = "<group>";
+		};
+		077276621AB4BE8600AEA537 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				077276631AB4BE8600AEA537 /* Info.plist */,
+				077276641AB4BE8600AEA537 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0772767B1AB4BE8600AEA537 /* BabySittingCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				0772767E1AB4BE8600AEA537 /* BabySittingCalculatorTests.m */,
+				0772767C1AB4BE8600AEA537 /* Supporting Files */,
+			);
+			path = BabySittingCalculatorTests;
+			sourceTree = "<group>";
+		};
+		0772767C1AB4BE8600AEA537 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0772767D1AB4BE8600AEA537 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0772765E1AB4BE8600AEA537 /* BabySittingCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 077276821AB4BE8600AEA537 /* Build configuration list for PBXNativeTarget "BabySittingCalculator" */;
+			buildPhases = (
+				0772765B1AB4BE8600AEA537 /* Sources */,
+				0772765C1AB4BE8600AEA537 /* Frameworks */,
+				0772765D1AB4BE8600AEA537 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BabySittingCalculator;
+			productName = BabySittingCalculator;
+			productReference = 0772765F1AB4BE8600AEA537 /* BabySittingCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		077276771AB4BE8600AEA537 /* BabySittingCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 077276851AB4BE8600AEA537 /* Build configuration list for PBXNativeTarget "BabySittingCalculatorTests" */;
+			buildPhases = (
+				077276741AB4BE8600AEA537 /* Sources */,
+				077276751AB4BE8600AEA537 /* Frameworks */,
+				077276761AB4BE8600AEA537 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0772767A1AB4BE8600AEA537 /* PBXTargetDependency */,
+			);
+			name = BabySittingCalculatorTests;
+			productName = BabySittingCalculatorTests;
+			productReference = 077276781AB4BE8600AEA537 /* BabySittingCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		077276571AB4BE8600AEA537 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Credible Solutions, Inc.";
+				TargetAttributes = {
+					0772765E1AB4BE8600AEA537 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					077276771AB4BE8600AEA537 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 0772765E1AB4BE8600AEA537;
+					};
+				};
+			};
+			buildConfigurationList = 0772765A1AB4BE8600AEA537 /* Build configuration list for PBXProject "BabySittingCalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 077276561AB4BE8600AEA537;
+			productRefGroup = 077276601AB4BE8600AEA537 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0772765E1AB4BE8600AEA537 /* BabySittingCalculator */,
+				077276771AB4BE8600AEA537 /* BabySittingCalculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0772765D1AB4BE8600AEA537 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0772766E1AB4BE8600AEA537 /* Main.storyboard in Resources */,
+				077276731AB4BE8600AEA537 /* LaunchScreen.xib in Resources */,
+				077276701AB4BE8600AEA537 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		077276761AB4BE8600AEA537 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0772765B1AB4BE8600AEA537 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0772766B1AB4BE8600AEA537 /* ViewController.m in Sources */,
+				077276681AB4BE8600AEA537 /* AppDelegate.m in Sources */,
+				077276651AB4BE8600AEA537 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		077276741AB4BE8600AEA537 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0772767F1AB4BE8600AEA537 /* BabySittingCalculatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0772767A1AB4BE8600AEA537 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0772765E1AB4BE8600AEA537 /* BabySittingCalculator */;
+			targetProxy = 077276791AB4BE8600AEA537 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0772766C1AB4BE8600AEA537 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0772766D1AB4BE8600AEA537 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		077276711AB4BE8600AEA537 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				077276721AB4BE8600AEA537 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		077276801AB4BE8600AEA537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		077276811AB4BE8600AEA537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		077276831AB4BE8600AEA537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BabySittingCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		077276841AB4BE8600AEA537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BabySittingCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		077276861AB4BE8600AEA537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BabySittingCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BabySittingCalculator.app/BabySittingCalculator";
+			};
+			name = Debug;
+		};
+		077276871AB4BE8600AEA537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BabySittingCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BabySittingCalculator.app/BabySittingCalculator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0772765A1AB4BE8600AEA537 /* Build configuration list for PBXProject "BabySittingCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				077276801AB4BE8600AEA537 /* Debug */,
+				077276811AB4BE8600AEA537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		077276821AB4BE8600AEA537 /* Build configuration list for PBXNativeTarget "BabySittingCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				077276831AB4BE8600AEA537 /* Debug */,
+				077276841AB4BE8600AEA537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		077276851AB4BE8600AEA537 /* Build configuration list for PBXNativeTarget "BabySittingCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				077276861AB4BE8600AEA537 /* Debug */,
+				077276871AB4BE8600AEA537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 077276571AB4BE8600AEA537 /* Project object */;
+}
