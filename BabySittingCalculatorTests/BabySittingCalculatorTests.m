@@ -34,7 +34,7 @@
     XCTAssert(income > 0);
 }
 
-#pragma mark - Tests for Job Range Validation
+#pragma mark - Tests for Working Hours Range Validation
 - (void)testTimeRangesForStopAndStart {
     NSArray *times = @[@16, @17, @18, @19, @20, @21, @22, @23, @0, @1, @2, @3, @4, @5];
     int arbitraryBedtime = 19;
@@ -113,6 +113,10 @@
 
 - (void)testCalculationOfPayBedtimeAt11pm {
     XCTAssertEqual(144.0, [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:4 withBedTimeAt:23]);
+}
+
+- (void)testCalculationOfPayWorkingZeroHours {
+    XCTAssertEqual(0.0, [self.calculator calculateOneNightPayFromStartHour:18 toEndHour:18 withBedTimeAt:23]);
 }
 
 
