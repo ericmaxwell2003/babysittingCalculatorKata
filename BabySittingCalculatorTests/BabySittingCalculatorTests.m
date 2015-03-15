@@ -52,20 +52,38 @@
 - (void)testWeCanStartAt11pm
 {
     double income = [self.calculator calculateOneNightPayFromStartHour:23 toEndHour:3];
-    XCTAssert(income > 0, @"We cannot after midnight!");
+    XCTAssert(income > 0, @"We cannot start at 11pm!");
 }
 
 
 - (void)testWeCanStartAtMidnight
 {
     double income = [self.calculator calculateOneNightPayFromStartHour:0 toEndHour:3];
-    XCTAssert(income > 0, @"We cannot after midnight!");
+    XCTAssert(income > 0, @"We cannot start at midnight!");
 }
 
 - (void)testWeCanStartAfterMidnight
 {
     double income = [self.calculator calculateOneNightPayFromStartHour:1 toEndHour:3];
-    XCTAssert(income > 0, @"We cannot after midnight!");
+    XCTAssert(income > 0, @"We cannot start after midnight!");
+}
+
+- (void)testWeCanEndAt4am
+{
+    double income = [self.calculator calculateOneNightPayFromStartHour:23 toEndHour:4];
+    XCTAssert(income > 0, @"We cannot end the day at 4!");
+}
+
+- (void)testWeCanEndAfter4am
+{
+    NSException *e = nil;
+    @try {
+        [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:5];
+    }
+    @catch (NSException *exception) {
+        e = exception;
+    }
+    XCTAssert(e != nil && [e.name isEqualToString:INVALID_END_HOUR_ERROR], @"Exception should have bene thrown for trying to end after 4am!");
 }
 
 
