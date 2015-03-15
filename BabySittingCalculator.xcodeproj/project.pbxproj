@@ -14,6 +14,7 @@
 		077276701AB4BE8600AEA537 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0772766F1AB4BE8600AEA537 /* Images.xcassets */; };
 		077276731AB4BE8600AEA537 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 077276711AB4BE8600AEA537 /* LaunchScreen.xib */; };
 		0772767F1AB4BE8600AEA537 /* BabySittingCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0772767E1AB4BE8600AEA537 /* BabySittingCalculatorTests.m */; };
+		0772768A1AB4C06F00AEA537 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 077276891AB4C06F00AEA537 /* Calculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		077276781AB4BE8600AEA537 /* BabySittingCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabySittingCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0772767D1AB4BE8600AEA537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0772767E1AB4BE8600AEA537 /* BabySittingCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabySittingCalculatorTests.m; sourceTree = "<group>"; };
+		077276881AB4C06F00AEA537 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		077276891AB4C06F00AEA537 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				077276671AB4BE8600AEA537 /* AppDelegate.m */,
 				077276691AB4BE8600AEA537 /* ViewController.h */,
 				0772766A1AB4BE8600AEA537 /* ViewController.m */,
+				077276881AB4C06F00AEA537 /* Calculator.h */,
+				077276891AB4C06F00AEA537 /* Calculator.m */,
 				0772766C1AB4BE8600AEA537 /* Main.storyboard */,
 				0772766F1AB4BE8600AEA537 /* Images.xcassets */,
 				077276711AB4BE8600AEA537 /* LaunchScreen.xib */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0772766B1AB4BE8600AEA537 /* ViewController.m in Sources */,
+				0772768A1AB4C06F00AEA537 /* Calculator.m in Sources */,
 				077276681AB4BE8600AEA537 /* AppDelegate.m in Sources */,
 				077276651AB4BE8600AEA537 /* main.m in Sources */,
 			);

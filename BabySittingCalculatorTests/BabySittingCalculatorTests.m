@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "Calculator.h"
 
 @interface BabySittingCalculatorTests : XCTestCase
+
+@property (nonatomic, retain) Calculator* calculator;
 
 @end
 
@@ -17,17 +20,16 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.calculator = [[Calculator alloc] init];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(NO, @"First test should fail to be sure they're working!");
+- (void)testCalculateOneNightPayReturnsNonIncomeGreaterThan0 {
+    double income = [self.calculator calculateOneNightPayFromStartHour:18 toEndHour:20];
+    XCTAssert(income > 0, @"First test should fail to be sure they're working!");
 }
 
 @end
