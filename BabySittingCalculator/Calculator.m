@@ -12,22 +12,25 @@
 
 - (double)calculateOneNightPayFromStartHour:(int)startHour toEndHour:(int)endHour
 {
-    if(([self isHourAm:startHour] && startHour > 4) || ([self isHourPm:startHour] && startHour < 17)) {
-        [NSException raise:INVALID_START_HOUR_ERROR format:@"startHour of %d is invalid, it cannot be before 5pm", startHour];
-    } else if (([self isHourAm:endHour] && endHour > 4) || ([self isHourPm:endHour] && endHour < 17)) {
-        [NSException raise:INVALID_END_HOUR_ERROR format:@"endHour of %d is invalid, it cannot be after 4am", endHour];
+    
+    if(![self isValidHour:startHour] || ![self isValidHour:endHour]) {
+        [NSException raise:INVALID_TIMES_ERROR format:@"Time range given (%d,%d) is invalid, Valid range is from 5pm - 4am", startHour, endHour];
     }
     return 1.0;
+}
+
+- (BOOL)isValidHour:(int)time
+{
+    if([self isHourAm:time]) {
+        return time <= 4; //  4am
+    } else {
+        return time >= 17; // 5pm
+    }
 }
 
 - (BOOL)isHourAm:(int)hour
 {
     return (hour - 12) < 0;
-}
-
-- (BOOL)isHourPm:(int)hour
-{
-    return ![self isHourAm:hour];
 }
 
 @end

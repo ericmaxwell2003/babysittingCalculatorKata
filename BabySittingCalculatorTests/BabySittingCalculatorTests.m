@@ -46,7 +46,7 @@
     @catch (NSException *exception) {
         e = exception;
     }
-    XCTAssert(e != nil && [e.name isEqualToString:INVALID_START_HOUR_ERROR], @"Exception should have bene thrown for trying to start before 5pm!");
+    XCTAssert(e != nil && [e.name isEqualToString:INVALID_TIMES_ERROR], @"Exception should have bene thrown for trying to start before 5pm!");
 }
 
 - (void)testWeCanStartAt11pm
@@ -83,7 +83,7 @@
     @catch (NSException *exception) {
         e = exception;
     }
-    XCTAssert(e != nil && [e.name isEqualToString:INVALID_END_HOUR_ERROR], @"Exception should have bene thrown for trying to end after 4am!");
+    XCTAssert(e != nil && [e.name isEqualToString:INVALID_TIMES_ERROR], @"Exception should have bene thrown for trying to end after 4am!");
 }
 
 

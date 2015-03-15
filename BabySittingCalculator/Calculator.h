@@ -10,8 +10,7 @@
 
 @interface Calculator : NSObject
 
-#define INVALID_START_HOUR_ERROR @"INVALID_START_HOUR"
-#define INVALID_END_HOUR_ERROR @"INVALID_END_HOUR"
+#define INVALID_TIMES_ERROR @"INVALID_TIMES"
 
 - (double)calculateOneNightPayFromStartHour:(int)startHour toEndHour:(int)endHour;
 
