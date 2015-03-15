@@ -18,6 +18,7 @@
 
 @implementation BabySittingCalculatorTests
 
+#pragma mark - Setup/Tear Down
 - (void)setUp {
     [super setUp];
     self.calculator = [[Calculator alloc] init];
@@ -27,11 +28,13 @@
     [super tearDown];
 }
 
+#pragma mark - Sanity Check
 - (void)testCalculateOneNightPayReturnsNonIncomeGreaterThan0 {
     double income = [self.calculator calculateOneNightPayFromStartHour:18 toEndHour:20 withBedTimeAt:19];
     XCTAssert(income > 0);
 }
 
+#pragma mark - Tests for Job Range Validation
 - (void)testTimeRangesForStopAndStart {
     NSArray *times = @[@16, @17, @18, @19, @20, @21, @22, @23, @0, @1, @2, @3, @4, @5];
     int arbitraryBedtime = 19;
@@ -48,8 +51,6 @@
     }
 }
 
-#pragma mark - Helper
-    
 - (void)runWithTimes:(int)start end:(int)end bedtime:(int)bedtime expectingException:(BOOL)expectingException
 {
     NSLog(@"Testing: [self.calculator calculateOneNightPayFromStartHour:%d toEndHour:%d withBedTimeAt:%d] expectedException: %@",
@@ -69,5 +70,12 @@
     }
     
 }
+
+#pragma mark - Test Calculations
+- (void)testCalculateOneNightPayReturnsNonIncomeGreaterThan0 {
+    double income = [self.calculator calculateOneNightPayFromStartHour:18 toEndHour:20 withBedTimeAt:19];
+    XCTAssert(income > 0);
+}
+
 
 @end
