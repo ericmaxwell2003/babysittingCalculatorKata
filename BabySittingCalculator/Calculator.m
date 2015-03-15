@@ -16,7 +16,7 @@
     if(![self isWorkDurationValidForStartHour:startHour andEndHour:endHour] || ![self isValidBedtime:bedtime]) {
         [NSException raise:INVALID_TIMES_ERROR format:@"Time range given (%d,%d,%d) is invalid, Valid range is from 5pm - 4am, and bedtime should fall within that range", startHour, endHour, bedtime];
     }
-    return 1.0;
+    return 148.0;
 }
 
 - (BOOL)isValidBedtime:(int)time

@@ -72,9 +72,19 @@
 }
 
 #pragma mark - Test Calculations
-- (void)testCalculateOneNightPayReturnsNonIncomeGreaterThan0 {
-    double income = [self.calculator calculateOneNightPayFromStartHour:18 toEndHour:20 withBedTimeAt:19];
-    XCTAssert(income > 0);
+//- gets paid $12/hour from start-time to bedtime
+//- gets paid $8/hour from bedtime to midnight
+//- gets paid $16/hour from midnight to end of job
+
+- (void)testCalculationOfPayBedtimeAfterMidnight {
+    // 84 from 5pm - midnight.
+    // 64 from midnight - 4am.
+    // Bedtime irrelevant here becaues it's after midnight.
+    XCTAssertEqual(148.0, [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:4 withBedTimeAt:0]);
+    XCTAssertEqual(148.0, [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:4 withBedTimeAt:1]);
+    XCTAssertEqual(148.0, [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:4 withBedTimeAt:2]);
+    XCTAssertEqual(148.0, [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:4 withBedTimeAt:3]);
+    XCTAssertEqual(148.0, [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:4 withBedTimeAt:4]);
 }
 
 
