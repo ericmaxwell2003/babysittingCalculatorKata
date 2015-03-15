@@ -29,7 +29,26 @@
 
 - (void)testCalculateOneNightPayReturnsNonIncomeGreaterThan0 {
     double income = [self.calculator calculateOneNightPayFromStartHour:18 toEndHour:20];
-    XCTAssert(income > 0, @"First test should fail to be sure they're working!");
+    XCTAssert(income > 0, @"We did not get a non zero number back, our calculator is costing us money!");
 }
+
+- (void)testWeCanStartAt5pm {
+    double income = [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:20];
+    XCTAssert(income > 0, @"We cannot start at 5pm like the rules say!");
+}
+
+- (void)testWeCannotStartBefore5pm
+{
+    NSException *e = nil;
+    @try {
+        [self.calculator calculateOneNightPayFromStartHour:16 toEndHour:20];
+    }
+    @catch (NSException *exception) {
+        e = exception;
+    }
+    XCTAssert(e != nil && [e.name isEqualToString:INVALID_START_HOUR_ERROR], @"Exception should have bene thrown for trying to start before 5pm!");
+}
+
+
 
 @end

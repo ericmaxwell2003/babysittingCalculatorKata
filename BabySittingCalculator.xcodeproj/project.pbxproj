@@ -15,6 +15,7 @@
 		077276731AB4BE8600AEA537 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 077276711AB4BE8600AEA537 /* LaunchScreen.xib */; };
 		0772767F1AB4BE8600AEA537 /* BabySittingCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0772767E1AB4BE8600AEA537 /* BabySittingCalculatorTests.m */; };
 		0772768A1AB4C06F00AEA537 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 077276891AB4C06F00AEA537 /* Calculator.m */; };
+		0772768C1AB51B3300AEA537 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0772768B1AB51B3300AEA537 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		0772767E1AB4BE8600AEA537 /* BabySittingCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabySittingCalculatorTests.m; sourceTree = "<group>"; };
 		077276881AB4C06F00AEA537 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		077276891AB4C06F00AEA537 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		0772768B1AB51B3300AEA537 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		077276621AB4BE8600AEA537 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0772768B1AB51B3300AEA537 /* README.md */,
 				077276631AB4BE8600AEA537 /* Info.plist */,
 				077276641AB4BE8600AEA537 /* main.m */,
 			);
@@ -226,6 +229,7 @@
 			files = (
 				0772766B1AB4BE8600AEA537 /* ViewController.m in Sources */,
 				0772768A1AB4C06F00AEA537 /* Calculator.m in Sources */,
+				0772768C1AB51B3300AEA537 /* README.md in Sources */,
 				077276681AB4BE8600AEA537 /* AppDelegate.m in Sources */,
 				077276651AB4BE8600AEA537 /* main.m in Sources */,
 			);
