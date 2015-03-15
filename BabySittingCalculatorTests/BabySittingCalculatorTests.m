@@ -87,5 +87,33 @@
     XCTAssertEqual(148.0, [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:4 withBedTimeAt:4]);
 }
 
+- (void)testCalculationOfPayBedtimeAt5pm {
+    XCTAssertEqual(120.0, [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:4 withBedTimeAt:17]);
+}
+
+- (void)testCalculationOfPayBedtimeAt6pm {
+    XCTAssertEqual(124.0, [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:4 withBedTimeAt:18]);
+}
+
+- (void)testCalculationOfPayBedtimeAt7pm {
+    XCTAssertEqual(128.0, [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:4 withBedTimeAt:19]);
+}
+
+- (void)testCalculationOfPayBedtimeAt8pm {
+    XCTAssertEqual(132.0, [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:4 withBedTimeAt:20]);
+}
+
+- (void)testCalculationOfPayBedtimeAt9pm {
+    XCTAssertEqual(136.0, [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:4 withBedTimeAt:21]);
+}
+
+- (void)testCalculationOfPayBedtimeAt10pm {
+    XCTAssertEqual(140.0, [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:4 withBedTimeAt:22]);
+}
+
+- (void)testCalculationOfPayBedtimeAt11pm {
+    XCTAssertEqual(144.0, [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:4 withBedTimeAt:23]);
+}
+
 
 @end

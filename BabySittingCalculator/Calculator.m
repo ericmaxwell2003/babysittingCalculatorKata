@@ -16,7 +16,38 @@
     if(![self isWorkDurationValidForStartHour:startHour andEndHour:endHour] || ![self isValidBedtime:bedtime]) {
         [NSException raise:INVALID_TIMES_ERROR format:@"Time range given (%d,%d,%d) is invalid, Valid range is from 5pm - 4am, and bedtime should fall within that range", startHour, endHour, bedtime];
     }
-    return 148.0;
+    
+    int hoursAtMidnightRate = 0;
+    if([self isHourAm:endHour]) {
+        if([self isHourAm:startHour]) {
+            hoursAtMidnightRate = endHour - startHour;
+        } else {
+            hoursAtMidnightRate = endHour;
+        }
+    }
+    
+    int hoursAtEarlyRate = 0;
+    int hoursAtBedtimeRate = 0;
+    if([self isHourPm:startHour]) {
+        if([self isHourPm:endHour]) {
+            hoursAtEarlyRate = endHour - startHour;
+            if(bedtime >= startHour && bedtime < endHour) {
+                hoursAtBedtimeRate = bedtime - startHour + 1;
+                hoursAtEarlyRate -= hoursAtBedtimeRate;
+            }
+        } else {
+            hoursAtEarlyRate = 24 - startHour;
+            if(bedtime >= startHour && bedtime <= 23) {
+                hoursAtBedtimeRate = 24 - bedtime;
+                hoursAtEarlyRate -= hoursAtBedtimeRate;
+            }
+        }
+    }
+
+    double pay = (hoursAtMidnightRate * 16) + (hoursAtBedtimeRate * 8) + (hoursAtEarlyRate * 12);
+    
+    return pay;
+    
 }
 
 - (BOOL)isValidBedtime:(int)time
