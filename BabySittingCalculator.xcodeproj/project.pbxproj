@@ -422,6 +422,7 @@
 				077276841AB4BE8600AEA537 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		077276851AB4BE8600AEA537 /* Build configuration list for PBXNativeTarget "BabySittingCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +431,7 @@
 				077276871AB4BE8600AEA537 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
