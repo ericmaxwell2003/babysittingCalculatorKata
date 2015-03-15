@@ -86,4 +86,17 @@
     XCTAssert(e != nil && [e.name isEqualToString:INVALID_TIMES_ERROR]);
 }
 
+
+- (void)testEndTimeCannotBeBeforeStartTime
+{
+    NSException *e = nil;
+    @try {
+        [self.calculator calculateOneNightPayFromStartHour:23 toEndHour:22 withBedTimeAt:19];
+    }
+    @catch (NSException *exception) {
+        e = exception;
+    }
+    XCTAssert(e != nil && [e.name isEqualToString:INVALID_TIMES_ERROR]);
+}
+
 @end
