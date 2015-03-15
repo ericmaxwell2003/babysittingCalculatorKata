@@ -28,12 +28,12 @@
 }
 
 - (void)testCalculateOneNightPayReturnsNonIncomeGreaterThan0 {
-    double income = [self.calculator calculateOneNightPayFromStartHour:18 toEndHour:20];
+    double income = [self.calculator calculateOneNightPayFromStartHour:18 toEndHour:20 withBedTimeAt:19];
     XCTAssert(income > 0, @"We did not get a non zero number back, our calculator is costing us money!");
 }
 
 - (void)testWeCanStartAt5pm {
-    double income = [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:20];
+    double income = [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:20 withBedTimeAt:19];
     XCTAssert(income > 0, @"We cannot start at 5pm like the rules say!");
 }
 
@@ -41,7 +41,7 @@
 {
     NSException *e = nil;
     @try {
-        [self.calculator calculateOneNightPayFromStartHour:16 toEndHour:20];
+        [self.calculator calculateOneNightPayFromStartHour:16 toEndHour:20 withBedTimeAt:19];
     }
     @catch (NSException *exception) {
         e = exception;
@@ -51,26 +51,26 @@
 
 - (void)testWeCanStartAt11pm
 {
-    double income = [self.calculator calculateOneNightPayFromStartHour:23 toEndHour:3];
+    double income = [self.calculator calculateOneNightPayFromStartHour:23 toEndHour:3 withBedTimeAt:19];
     XCTAssert(income > 0, @"We cannot start at 11pm!");
 }
 
 
 - (void)testWeCanStartAtMidnight
 {
-    double income = [self.calculator calculateOneNightPayFromStartHour:0 toEndHour:3];
+    double income = [self.calculator calculateOneNightPayFromStartHour:0 toEndHour:3 withBedTimeAt:19];
     XCTAssert(income > 0, @"We cannot start at midnight!");
 }
 
 - (void)testWeCanStartAfterMidnight
 {
-    double income = [self.calculator calculateOneNightPayFromStartHour:1 toEndHour:3];
+    double income = [self.calculator calculateOneNightPayFromStartHour:1 toEndHour:3 withBedTimeAt:19];
     XCTAssert(income > 0, @"We cannot start after midnight!");
 }
 
 - (void)testWeCanEndAt4am
 {
-    double income = [self.calculator calculateOneNightPayFromStartHour:23 toEndHour:4];
+    double income = [self.calculator calculateOneNightPayFromStartHour:23 toEndHour:4 withBedTimeAt:19];
     XCTAssert(income > 0, @"We cannot end the day at 4!");
 }
 
@@ -78,7 +78,7 @@
 {
     NSException *e = nil;
     @try {
-        [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:5];
+        [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:5 withBedTimeAt:19];
     }
     @catch (NSException *exception) {
         e = exception;

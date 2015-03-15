@@ -10,16 +10,21 @@
 
 @implementation Calculator
 
-- (double)calculateOneNightPayFromStartHour:(int)startHour toEndHour:(int)endHour
+- (double)calculateOneNightPayFromStartHour:(int)startHour toEndHour:(int)endHour withBedTimeAt:(int)bedtime
 {
     
-    if(![self isValidHour:startHour] || ![self isValidHour:endHour]) {
-        [NSException raise:INVALID_TIMES_ERROR format:@"Time range given (%d,%d) is invalid, Valid range is from 5pm - 4am", startHour, endHour];
+    if(![self isStartOrEndHour:startHour] || ![self isStartOrEndHour:endHour] || ![self isValidBedtime:bedtime]) {
+        [NSException raise:INVALID_TIMES_ERROR format:@"Time range given (%d,%d,%d) is invalid, Valid range is from 5pm - 4am, and bedtime should fall within that range", startHour, endHour, bedtime];
     }
     return 1.0;
 }
 
-- (BOOL)isValidHour:(int)time
+- (BOOL)isValidBedtime:(int)time
+{
+    return time >= 0 && time <= 23;
+}
+
+- (BOOL)isStartOrEndHour:(int)time
 {
     if([self isHourAm:time]) {
         return time <= 4; //  4am

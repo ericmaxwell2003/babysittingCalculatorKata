@@ -12,6 +12,6 @@
 
 #define INVALID_TIMES_ERROR @"INVALID_TIMES"
 
-- (double)calculateOneNightPayFromStartHour:(int)startHour toEndHour:(int)endHour;
+- (double)calculateOneNightPayFromStartHour:(int)startHour toEndHour:(int)endHour withBedTimeAt:(int)bedtime;
 
 @end
