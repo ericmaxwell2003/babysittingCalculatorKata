@@ -47,10 +47,14 @@
 
 - (BOOL)isStartOrEndHour:(int)time
 {
-    if([self isHourAm:time]) {
-        return time <= 4; //  4am
+    if(time < 0 || time > 23) {
+        return NO;
     } else {
-        return time >= 17; // 5pm
+        if([self isHourAm:time]) {
+            return time <= 4; //  4am
+        } else {
+            return time >= 17; // 5pm
+        }
     }
 }
 

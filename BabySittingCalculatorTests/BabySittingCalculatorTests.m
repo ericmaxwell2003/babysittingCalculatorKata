@@ -32,71 +32,42 @@
     XCTAssert(income > 0);
 }
 
-- (void)testWeCanStartAt5pm {
-    double income = [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:20 withBedTimeAt:19];
-    XCTAssert(income > 0);
+- (void)testTimeRangesForStopAndStart {
+    NSArray *times = @[@16, @17, @18, @19, @20, @21, @22, @23, @0, @1, @2, @3, @4, @5];
+    int arbitraryBedtime = 19;
+    for(int b = 0; b < times.count; b++) {
+        for(int e = 0; e < times.count; e++) {
+            BOOL expectException = (e < b) || // we know when the index of e < b that the end time is before the begin, which is invalid.
+                                   // also if the begin or end index is at the first or last element in the times, because the values
+                                   // at those indexes are just over the invalid mark either before or after the valid range.
+                                   (e == 0 || e == (times.count - 1) || b == 0 || b == (times.count - 1));
+            int startTime = [times[b] intValue];
+            int endTime = [times[e] intValue];
+            [self runWithTimes:startTime end:endTime bedtime:arbitraryBedtime expectingException:expectException];
+        }
+    }
 }
 
-- (void)testWeCannotStartBefore5pm
+#pragma mark - Helper
+    
+- (void)runWithTimes:(int)start end:(int)end bedtime:(int)bedtime expectingException:(BOOL)expectingException
 {
+    NSLog(@"Testing: [self.calculator calculateOneNightPayFromStartHour:%d toEndHour:%d withBedTimeAt:%d] expectedException: %@",
+          start, end, bedtime, (expectingException ? @"Yes": @"No"));
+          
     NSException *e = nil;
     @try {
-        [self.calculator calculateOneNightPayFromStartHour:16 toEndHour:20 withBedTimeAt:19];
+        [self.calculator calculateOneNightPayFromStartHour:start toEndHour:end withBedTimeAt:bedtime];
     }
     @catch (NSException *exception) {
         e = exception;
     }
-    XCTAssert(e != nil && [e.name isEqualToString:INVALID_TIMES_ERROR]);
-}
-
-- (void)testWeCanStartAt11pm
-{
-    double income = [self.calculator calculateOneNightPayFromStartHour:23 toEndHour:3 withBedTimeAt:19];
-    XCTAssert(income > 0);
-}
-
-
-- (void)testWeCanStartAtMidnight
-{
-    double income = [self.calculator calculateOneNightPayFromStartHour:0 toEndHour:3 withBedTimeAt:19];
-    XCTAssert(income > 0);
-}
-
-- (void)testWeCanStartAfterMidnight
-{
-    double income = [self.calculator calculateOneNightPayFromStartHour:1 toEndHour:3 withBedTimeAt:19];
-    XCTAssert(income > 0);
-}
-
-- (void)testWeCanEndAt4am
-{
-    double income = [self.calculator calculateOneNightPayFromStartHour:23 toEndHour:4 withBedTimeAt:19];
-    XCTAssert(income > 0);
-}
-
-- (void)testWeCanEndAfter4am
-{
-    NSException *e = nil;
-    @try {
-        [self.calculator calculateOneNightPayFromStartHour:17 toEndHour:5 withBedTimeAt:19];
+    if(expectingException) {
+        XCTAssert(e != nil && [e.name isEqualToString:INVALID_TIMES_ERROR]);
+    } else {
+        XCTAssert(e == nil);
     }
-    @catch (NSException *exception) {
-        e = exception;
-    }
-    XCTAssert(e != nil && [e.name isEqualToString:INVALID_TIMES_ERROR]);
-}
-
-
-- (void)testEndTimeCannotBeBeforeStartTime
-{
-    NSException *e = nil;
-    @try {
-        [self.calculator calculateOneNightPayFromStartHour:23 toEndHour:22 withBedTimeAt:19];
-    }
-    @catch (NSException *exception) {
-        e = exception;
-    }
-    XCTAssert(e != nil && [e.name isEqualToString:INVALID_TIMES_ERROR]);
+    
 }
 
 @end
