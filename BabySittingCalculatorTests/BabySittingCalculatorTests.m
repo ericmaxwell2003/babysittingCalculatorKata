@@ -49,6 +49,24 @@
     XCTAssert(e != nil && [e.name isEqualToString:INVALID_START_HOUR_ERROR], @"Exception should have bene thrown for trying to start before 5pm!");
 }
 
+- (void)testWeCanStartAt11pm
+{
+    double income = [self.calculator calculateOneNightPayFromStartHour:23 toEndHour:3];
+    XCTAssert(income > 0, @"We cannot after midnight!");
+}
+
+
+- (void)testWeCanStartAtMidnight
+{
+    double income = [self.calculator calculateOneNightPayFromStartHour:0 toEndHour:3];
+    XCTAssert(income > 0, @"We cannot after midnight!");
+}
+
+- (void)testWeCanStartAfterMidnight
+{
+    double income = [self.calculator calculateOneNightPayFromStartHour:1 toEndHour:3];
+    XCTAssert(income > 0, @"We cannot after midnight!");
+}
 
 
 @end
