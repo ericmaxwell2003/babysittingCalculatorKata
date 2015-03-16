@@ -4,14 +4,15 @@ Background
 ----------
 This kata simulates a babysitter working and getting paid for one night.  The rules are pretty straight forward:
 
+The requirements follow.  The UI is extremely rudimentry, just meant to provide a simple UI to drive the calculator outside of the unit tests.
+
 The babysitter 
-D - starts no earlier than 5:00PM
-D - leaves no later than 4:00AM
+- starts no earlier than 5:00PM
+- leaves no later than 4:00AM
 - gets paid $12/hour from start-time to bedtime
 - gets paid $8/hour from bedtime to midnight
 - gets paid $16/hour from midnight to end of job
-D - gets paid for full hours (no fractional hours) - (Calculator only accepts full hours as input.)
-
+- gets paid for full hours (no fractional hours) - (Calculator only accepts full hours as input.)
 
 Feature:
 As a babysitter
